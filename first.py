@@ -54,3 +54,34 @@ print('''
              
 ch=eval(input("ENTER THE NUMBER OF OPERATION YOU WANT TO DO :- "))
 
+
+
+#==========1.ATTENDANCE==================================
+
+
+
+if ch==1:
+    print('''           
+                        ATTENDENCE                   ''')
+    a=eval(input("ENTER THE CLASS :- "))
+    s=input("ENTER THE SECTION :- ")
+    st="select ROLLNO,NAME from student1 where class={} and sec='{}'".format(a,s)
+    cursor.execute(st)
+    data=cursor.fetchall()
+    for I in data:
+        print(I)
+            
+            
+    count=cursor.rowcount
+    for i in range(1,count):
+        att=input("Enter P if present and A for adsent FOR ROLL NUMBER "+str(i)+" :- ")
+        if att=='P':
+            st1="update student2,student1 set attendance=attendance+1 where sec='{}' and class={} and rollno={} and student1.admno=student2.admno".format(s,a,i)
+            cursor.execute(st1)
+            cursor.execute("select curdate()")
+        else:
+            st2="update student2,student1 set attendance=attendance+0 where sec='{}' and class={} and rollno={} and student1.admno=student2.admno".format(s,a,i)
+            cursor.execute(st2)
+            
+        print('NO ROLL NUMBER ARE LEFT')
+
