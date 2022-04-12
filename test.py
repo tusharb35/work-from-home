@@ -45,6 +45,17 @@ def attendance(a,s):
             cursor.execute(st2)
             mycon.commit()
             
+#=====================2.FUNCTION FOR ADDING NEW STUDENT==========================
+            
+            
+
+def addstudent(name,adno,clas,sec,rn):
+    cursor.execute("insert into student1 values({},'{}',{},'{}',{})").format(adno,name,clas,sec,rn)
+    mycon.commit()
+    cursor.execute("insert into student2 values({})").format(adno)
+    mycon.commit()
+    
+    
 
 
 #==================MAIN PROGRAM====================
