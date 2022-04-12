@@ -56,7 +56,34 @@ def addstudent(name,adno,clas,sec,rn):
     mycon.commit()
     
     
+#====================3.FUNCTION FOR UPDATING NAME================================
+    
+    
 
+def upname(na2,admo):
+    cursor.execute("update student1 set name='{}' where admno={}").format(na2,admo)
+    mycon.commit()
+    
+    
+
+#====================4.FUNCTION F0R UPDATING CLASS===============================
+    
+    
+def updclas(clas,admo):
+    cursor.execute("update student1 set class={} where admno={}").format(clas,admo)
+    mycon.commit()
+    
+    
+
+#====================5.FUNCTION FOR UPDATING SECTION=============================
+    
+    
+def upsec(se,admo):
+    cursor.execute("update student1 set sec='{}' where admno={}").format(se,admo)
+    mycon.commit()
+    
+
+    
 
 #==================MAIN PROGRAM====================
 
