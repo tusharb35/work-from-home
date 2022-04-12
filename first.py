@@ -85,3 +85,45 @@ if ch==1:
             
         print('NO ROLL NUMBER ARE LEFT')
 
+
+#================2.ADDING NEW STUDENT=================
+        
+        
+if ch==2:
+    print('''
+                 ADDING NEW STUDENT           ''' )
+    name=input("ENTER THE NAME :- ")
+    adno=eval(input('ENTER THE ADMISSION NUMBER :- '))
+    clas=eval(input('ENTER THE CLASS :- '))
+    sec=input('ENTER THE SECTION :- ')
+    rn=eval(input('ENTER THE ROLL NUMBER :- '))
+    attendence=0
+    st="insert into student1 values({},'{}',{},'{}',{})".format(adno,name,clas,sec,rn)
+    cursor.execute(st)
+    mycon.commit()
+    st1="insert into student2 values({},{})".format(adno,attendence)
+    cursor.execute(st1)
+    mycon.commit()
+
+    
+    
+    
+#===============3.UPDATING NAME==========================
+    
+    
+if ch==3:
+    print('''
+                 UPDATING NAME           ''')
+    na1=input('ENTER THE PRVIOUS NAME OF THE STUDENT :- ')
+    admo=eval(input('ENTER THE ADMISSION NUMBER OF THE STUDENT:- '))
+    na2=input('ENTER THE NEW NAME TO BE UPDATE :- ')
+    st="update student1 set name='{}' where admno={} and name='{}' ".format(na2,admo,na1)
+    cursor.execute(st)
+    mycon.commit()
+    
+    print("UPDATE SUCCESSFULLY THE NAME ",na1)
+    
+   
+
+    
+    
