@@ -111,6 +111,15 @@ def deletingdata(adno):
     cursor.execute("delete ADMNO,NAME,CLASS,SEC,ROLLNO from student1 where admno={}").format(adno)
     mycon.commit()
     
+#=================9.FUNCTION FOR TO DISPLAY ALL DATA=============================
+
+
+def display():
+    cursor.execute("select * from student1,student2 where student1.admno=student2.admno")
+    data=cursor.fetchall()
+    for i in data:
+        print(i)
+
 
 
 #==================MAIN PROGRAM====================
