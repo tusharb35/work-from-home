@@ -102,7 +102,16 @@ def disatt(name,clas,sec):
     for i in data:
         print(i)        
 
+
+#==================8.FUNCTION FOR DELETING DATA OF A STUDENT=======================
+
+
+
+def deletingdata(adno):
+    cursor.execute("delete ADMNO,NAME,CLASS,SEC,ROLLNO from student1 where admno={}").format(adno)
+    mycon.commit()
     
+
 
 #==================MAIN PROGRAM====================
 
