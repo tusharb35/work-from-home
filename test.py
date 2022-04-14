@@ -120,6 +120,9 @@ def display():
     for i in data:
         print(i)
 
+#=================10.FUNCTION FOR EXIT=========================================
+        #=========IN THE MAIN PROGRAM==================
+
 
 
 #==================MAIN PROGRAM====================
@@ -157,4 +160,18 @@ print('''
              
 ch=eval(input("ENTER THE NUMBER OF OPERATION YOU WANT TO DO :- "))
 
+
+#==========1.ATTENDANCE==================================
+
+
+if ch==1:
+    print('''           
+                        ATTENDENCE                   ''')
+    a=eval(input("ENTER THE CLASS :- "))
+    s=input("ENTER THE SECTION :- ")
+    attendance(a,s)
+    
+    print('NO ROLL NUMBER ARE LEFT')
+     
+     
 
