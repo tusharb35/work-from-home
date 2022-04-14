@@ -83,6 +83,25 @@ def upsec(se,admo):
     mycon.commit()
     
 
+#===================6.FUNCTION FOR UPDATING ADMISSION NUMBER===================
+    
+    
+def upnum(admo1,admo2):
+    cursor.execute("update student1 set admno={} where admno={}").format(admo2,admo1)
+    mycon.commit()
+    cursor.execute("update student2 set admno={} where admno={}").format(admo2,admo1)
+    mycon.commit()
+    
+
+#==================7.FUNCTION FOR DISPLAY ATTENDENCE OF A PARICULAR STUDENT======
+            
+            
+def disatt(name,clas,sec):
+    cursor.execute("select rollno,name,attendence from student1,student2 where name={} and class={} and sec={} and admo={} and student1.admno=student2.admno").format(name,clas,sec,admo)            
+    data=cursor.fetchall()
+    for i in data:
+        print(i)        
+
     
 
 #==================MAIN PROGRAM====================
