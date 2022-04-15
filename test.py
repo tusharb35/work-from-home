@@ -223,4 +223,39 @@ if ch==4:
     
     
 
+#==============5.UPDATING SECTION======================
+    
+    
+if ch==5:
+    print('''
+                   UPDATING SECTION
+        (*Admission NAME and SECTION of the student is MENDETORY)   ''')
+    admo=eval(input('ENTER THE ADMISSION NUMBER OF THE STUDENT :- '))
+    name=input('ENTER THE NAME OF THE STUDENT :- ')
+    clas=input('ENTER THE CLASS OF THE STUDENT :- ')
+    se=eval(input('ENTER THE NEW SECTION OF THE STUDENT :- '))
+    upsec(se,admo)
+    
+    print('STUDENT SECTION HAS BEEN SUCCESFULLY UPDATED ')
+    
+    
+    
+    
+#=============6.UPDATING ADMISSION NUMBER================
+
+
+
+if ch==6:
+    print('''
+                UPDATING ADMISSION NUMBER      ''')
+    
+    admo1=eval(input('ENTER THE OLD ADMISSION NUMBER OF THE STUDENT :- '))
+    name=input('ENTER THE NAME OF STUDENT :- ')
+    clas=eval(input('ENTER THE CLASS OF THE STUDENT :- '))
+    admo2=eval(input('ENTER THE NEW ADMISSION NUMBER OF THE STUDENT :- '))
+    upnum(admo1,admo2)
+    
+    print('STUDENT ADMISSION NUMBER HAS BEEN SUCCESFULLY UPDATED ')
+    
+    
 
