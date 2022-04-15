@@ -174,6 +174,23 @@ if ch==1:
     print('NO ROLL NUMBER ARE LEFT')
      
      
+#================2.ADDING NEW STUDENT=================
+
+
+if ch==2:
+    print('''
+                 ADDING NEW STUDENT            ''')
+    name=input("ENTER THE NAME :- ")
+    adno=eval(input('ENTER THE ADMISSION NUMBER :- '))
+    clas=input('ENTER THE CLASS :- ')
+    sec=input('ENTER THE SECTION :- ')
+    rn=eval(input('ENTER THE ROLL NUMBER :- '))
+    addstudent(name,adno,clas,sec,rn)
+    
+    print('STUDENT HAS BEEN SUCCESFULLY ADDED ')
+    
+    
+    
 
 #===============3.UPDATING NAME==========================
     
