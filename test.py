@@ -290,5 +290,11 @@ if ch==9:
     print('''
                 DISPLAYING ALL DATA  ''')
     display()
-
+    
+    
+#============10.FOR EXIT==========================================
+    
+    
+if ch==10:
+    print("THANK   YOU   FOR    USING")
 
