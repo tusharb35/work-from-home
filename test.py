@@ -175,3 +175,35 @@ if ch==1:
      
      
 
+#===============3.UPDATING NAME==========================
+    
+    
+if ch==3:
+    print('''
+                 UPDATING NAME           ''')
+    na1=input('ENTER THE PRVIOUS NAME OF THE STUDENT :- ')
+    admo=eval(input('ENTER THE ADMISSION NUMBER OF THE STUDENT:- '))
+    na2=input('ENTER THE NEW NAME TO BE UPDATE :- ')
+    upname(na2,admo)
+    
+    print('STUDENT NAME HAS BEEN SUCCESFULLY UPDATED ')
+    
+    
+    
+    
+#=============4.UPDATING CLASS==========================
+    
+    
+if ch==4:
+    print('''
+                 UPDATING CLASS           ''')
+    name=input('ENTER THE NMAE OF SUDENT :- ')
+    admo=eval(input('ENTER THE ADMISSION NUMBER OF THE STUDENT:- '))
+    clas=eval(input('ENTER THE NEW CLASS OF STUDENT :- '))
+    clss(clas,admo)
+    
+    print('STUDENT CLASS HAS BEEN SUCCESFULLY UPDATED ')
+    
+    
+
+
