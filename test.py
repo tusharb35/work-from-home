@@ -258,4 +258,37 @@ if ch==6:
     print('STUDENT ADMISSION NUMBER HAS BEEN SUCCESFULLY UPDATED ')
     
     
+#===========7.TO DISPLAY ATTENDENCE OF A PARICULAR STUDENT======
+    
+    
+if ch==7:
+    print('''
+             TO DISPLAY ATTENDENCE OF A PARICULAR STUDENT  ''')
+    name=input('ENTER THE NAME OF THE STUDENT :- ')
+    clas=eval(input('ENTER THE CLASS OF THE STUDENT :- '))
+    sec=input('ENTER THE SECTION OF THE STUDENT :- ')
+    admo=eval(input('ENTER THE ADMISSION NUMBER OF THE STUDENT :- '))
+    disatt(name,clas,sec)
+    
+    
+
+#===========8.DELETING DATA OF A STUDENT========================
+    
+
+if ch==8:
+    print('''
+              TO DELETING DATA OF ''')
+    name=input('ENTER THE NAME OF THE STUDENT :- ')
+    admo=eval(input('ENTER THE ADMISSION NUMBER OF THE STUDENT :- '))
+    deletingdata(admo)
+    
+
+#===========9.DISPLAYING ALL DATA================================
+    
+
+if ch==9:
+    print('''
+                DISPLAYING ALL DATA  ''')
+    display()
+
 
