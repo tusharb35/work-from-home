@@ -106,7 +106,22 @@ if ch==2:
     mycon.commit()
 
     
-
+#===============3.UPDATING NAME==========================
+    
+    
+if ch==3:
+    print('''
+                 UPDATING NAME           ''')
+    na1=input('ENTER THE PRVIOUS NAME OF THE STUDENT :- ')
+    admo=eval(input('ENTER THE ADMISSION NUMBER OF THE STUDENT:- '))
+    na2=input('ENTER THE NEW NAME TO BE UPDATE :- ')
+    upname(na2,admo)
+    
+    print('STUDENT NAME HAS BEEN SUCCESFULLY UPDATED ')
+    
+    
+    
+    
    
 
     
