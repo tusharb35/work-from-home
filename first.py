@@ -119,10 +119,19 @@ if ch==3:
     
     print('STUDENT NAME HAS BEEN SUCCESFULLY UPDATED ')
     
-    
-    
-    
-   
 
+
+#=============4.UPDATING CLASS==========================
+    
+    
+if ch==4:
+    print('''
+                 UPDATING CLASS           ''')
+    name=input('ENTER THE NMAE OF SUDENT :- ')
+    admo=eval(input('ENTER THE ADMISSION NUMBER OF THE STUDENT:- '))
+    clas=eval(input('ENTER THE NEW CLASS OF STUDENT :- '))
+    updclas(clas,admo)
+    
+    print('STUDENT CLASS HAS BEEN SUCCESFULLY UPDATED ')
     
     
