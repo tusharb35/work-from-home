@@ -115,12 +115,13 @@ if ch==3:
     na1=input('ENTER THE PRVIOUS NAME OF THE STUDENT :- ')
     admo=eval(input('ENTER THE ADMISSION NUMBER OF THE STUDENT:- '))
     na2=input('ENTER THE NEW NAME TO BE UPDATE :- ')
-    upname(na2,admo)
+    st="update student1 set name='{}' where admno={} and name='{}' ".format(na2,admo,na1)
+    cursor.execute(st)
+    mycon.commit()
     
-    print('STUDENT NAME HAS BEEN SUCCESFULLY UPDATED ')
+    print("UPDATE SUCCESSFULLY THE NAME ",na1)
     
-
-
+   
 #=============4.UPDATING CLASS==========================
     
     
