@@ -131,12 +131,14 @@ if ch==4:
     name=input('ENTER THE NMAE OF SUDENT :- ')
     admo=eval(input('ENTER THE ADMISSION NUMBER OF THE STUDENT:- '))
     clas=eval(input('ENTER THE NEW CLASS OF STUDENT :- '))
-    updclas(clas,admo)
+    st="update student1 set class={} where admno={}".format(clas,admo)
+    cursor.execute(st)
+    mycon.commit()
     
-    print('STUDENT CLASS HAS BEEN SUCCESFULLY UPDATED ')
-    
-    
+    print("NEW CLASS OF ",name," UPDATED AS ",clas)
 
+
+    
 #==============5.UPDATING SECTION======================
     
     
@@ -146,12 +148,13 @@ if ch==5:
         (*Admission NAME and SECTION of the student is MENDETORY)   ''')
     admo=eval(input('ENTER THE ADMISSION NUMBER OF THE STUDENT :- '))
     name=input('ENTER THE NAME OF THE STUDENT :- ')
-    clas=input('ENTER THE CLASS OF THE STUDENT :- ')
-    se=eval(input('ENTER THE NEW SECTION OF THE STUDENT :- '))
-    upsec(se,admo)
+    clas=eval(input('ENTER THE CLASS OF THE STUDENT :- '))
+    sec=input('ENTER THE NEW SECTION OF THE STUDENT :- ')
+    st="update student1 set sec='{}' where admno={}".format(sec,admo)
+    cursor.execute(st)
+    mycon.commit()
     
-    print('STUDENT SECTION HAS BEEN SUCCESFULLY UPDATED ')
-    
+    print("UPDATED SECTION OF ",name," AS ",sec)
     
     
     
