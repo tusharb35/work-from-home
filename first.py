@@ -156,5 +156,28 @@ if ch==5:
     
     print("UPDATED SECTION OF ",name," AS ",sec)
     
+  
+    
+ #=============6.UPDATING ADMISSION NUMBER================
     
     
+if ch==6:
+    print('''
+                UPDATING ADMISSION NUMBER      ''')
+    
+    admo1=eval(input('ENTER THE OLD ADMISSION NUMBER OF THE STUDENT :- '))
+    name=input('ENTER THE NAME OF STUDENT :- ')
+    clas=eval(input('ENTER THE CLASS OF THE STUDENT :- '))
+    admo2=eval(input('ENTER THE NEW ADMISSION NUMBER OF THE STUDENT :- '))
+    st="update student1 set admno={} where admno={}".format(admo2,admo1)
+    cursor.execute(st)
+    mycon.commit()
+    
+    st1="update student2 set admno={} where admno={}".format(admo2,admo1)
+    cursor.execute(st1)
+    mycon.commit()
+    
+    print("THE ADMISSION NUMBER OF ", name," IS UPDATED AS ",admo2)
+    
+    
+   
