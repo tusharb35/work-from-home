@@ -156,8 +156,8 @@ if ch==5:
     
     print("UPDATED SECTION OF ",name," AS ",sec)
     
-  
-    
+
+
  #=============6.UPDATING ADMISSION NUMBER================
     
     
@@ -180,4 +180,32 @@ if ch==6:
     print("THE ADMISSION NUMBER OF ", name," IS UPDATED AS ",admo2)
     
     
-   
+
+  #===========7.TO DISPLAY ATTENDENCE OF A PARICULAR STUDENT======
+    
+    
+if ch==7:
+    print('''
+             TO DISPLAY ATTENDENCE OF A PARICULAR STUDENT  ''')
+    name=input('ENTER THE NAME OF THE STUDENT :- ')
+    clas=eval(input('ENTER THE CLASS OF THE STUDENT :- '))
+    sec=input('ENTER THE SECTION OF THE STUDENT :- ')
+    admo=eval(input('ENTER THE ADMISSION NUMBER OF THE STUDENT :- '))
+    cursor.execute("select rollno,name,attendence from student1,student2 where name='{}' and class={} and sec='{}' and admno={} and student1.admno=student2.admno").format(name,clas,sec,admo)
+    date=cursor.fetchall()
+    for i in data:
+        print(i)
+    
+    
+    
+    cursor.execute("delete ADMNO,NAME,CLASS,SEC,ROLLNO from student1 where admno={}").format(adno)
+    mycon.commit()
+    
+    
+    cursor.execute("select * from student1,student2 where student1.admno=student2.admono")
+    date=cursor.fetchall()
+    for i in data:
+        print(i)
+    
+    
+     
